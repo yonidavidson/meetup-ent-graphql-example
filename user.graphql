@@ -1,0 +1,65 @@
+"""Maps a Time GraphQL scalar to a Go time.Time struct."""
+scalar Time
+
+"""
+Define an object type and map it later to the generated Ent model.
+https://graphql.org/learn/schema/#object-types-and-fields
+"""
+type User{
+
+  """ID of User"""
+  id: ID!
+  """Age of User"""
+  age: Int!
+  """Creation Time of User"""
+  createdAt: Time!
+  """Name of User"""
+  name: String!
+  """Users that follow User"""
+  followers: [User!]
+  """Users that User follows"""
+  following: [User!]
+}
+
+"""
+Define an input type for the mutation below.
+https://graphql.org/learn/schema/#input-types
+"""
+input CreateUserInput {
+
+  """User name"""
+  name: String!
+  """User age"""
+  age: Int!
+}
+
+"""
+Define an input type for the mutation below.
+https://graphql.org/learn/schema/#input-types
+"""
+input FollowUserInput {
+
+  """ID of the following User"""
+  userID: ID!
+  """ID of Followed User"""
+  followUserID: ID!
+}
+
+"""
+Define a mutation for creating a user and following one.
+https://graphql.org/learn/queries/#mutations
+"""
+type Mutation {
+
+  """Create a new User"""
+  createUser(input: CreateUserInput!): User!
+  """Follow a User"""
+  FollowUser(input:FollowUserInput!): User!
+}
+
+"""Define a query for getting all users."""
+type Query {
+  """Query all Users"""
+  users: [User]!
+}
+
