@@ -5,7 +5,7 @@ package ent
 import (
 	"errors"
 	"fmt"
-	"meetup-ent-graphql-example/ent/user"
+	"user/ent/user"
 
 	"entgo.io/ent"
 	"entgo.io/ent/dialect/sql"

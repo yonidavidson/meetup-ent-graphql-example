@@ -4,9 +4,9 @@ package ent
 
 import (
 	"fmt"
-	"meetup-ent-graphql-example/ent/user"
 	"strings"
 	"time"
+	"user/ent/user"
 
 	"entgo.io/ent/dialect/sql"
 )

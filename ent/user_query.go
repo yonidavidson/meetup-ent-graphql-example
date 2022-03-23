@@ -8,8 +8,8 @@ import (
 	"errors"
 	"fmt"
 	"math"
-	"meetup-ent-graphql-example/ent/predicate"
-	"meetup-ent-graphql-example/ent/user"
+	"user/ent/predicate"
+	"user/ent/user"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

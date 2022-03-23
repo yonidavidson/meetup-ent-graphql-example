@@ -6,8 +6,8 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"meetup-ent-graphql-example/ent/user"
 	"time"
+	"user/ent/user"
 
 	"entgo.io/ent/dialect/sql/sqlgraph"
 	"entgo.io/ent/schema/field"

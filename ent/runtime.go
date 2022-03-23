@@ -3,9 +3,9 @@
 package ent
 
 import (
-	"meetup-ent-graphql-example/ent/schema"
-	"meetup-ent-graphql-example/ent/user"
 	"time"
+	"user/ent/schema"
+	"user/ent/user"
 )
 
 // The init function reads all schema descriptors with runtime code

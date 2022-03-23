@@ -3,8 +3,8 @@
 package user
 
 import (
-	"meetup-ent-graphql-example/ent/predicate"
 	"time"
+	"user/ent/predicate"
 
 	"entgo.io/ent/dialect/sql"
 	"entgo.io/ent/dialect/sql/sqlgraph"

@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"log"
 
-	"meetup-ent-graphql-example/ent/migrate"
+	"user/ent/migrate"
 
-	"meetup-ent-graphql-example/ent/user"
+	"user/ent/user"
 
 	"entgo.io/ent/dialect"
 	"entgo.io/ent/dialect/sql"
@@ -23,6 +23,8 @@ type Client struct {
 	Schema *migrate.Schema
 	// User is the client for interacting with the User builders.
 	User *UserClient
+	// additional fields for node api
+	tables tables
 }
 
 // NewClient creates a new client configured with the given options.

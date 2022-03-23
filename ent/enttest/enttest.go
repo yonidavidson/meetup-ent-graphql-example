@@ -4,9 +4,9 @@ package enttest
 
 import (
 	"context"
-	"meetup-ent-graphql-example/ent"
+	"user/ent"
 	// required by schema hooks.
-	_ "meetup-ent-graphql-example/ent/runtime"
+	_ "user/ent/runtime"
 
 	"entgo.io/ent/dialect/sql/schema"
 )

@@ -6,10 +6,10 @@ import (
 	"context"
 	"errors"
 	"fmt"
-	"meetup-ent-graphql-example/ent/predicate"
-	"meetup-ent-graphql-example/ent/user"
 	"sync"
 	"time"
+	"user/ent/predicate"
+	"user/ent/user"
 
 	"entgo.io/ent"
 )
