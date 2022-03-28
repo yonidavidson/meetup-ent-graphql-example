@@ -60,6 +60,9 @@ type Mutation {
 """Define a query for getting all users."""
 type Query {
   """Query all Users"""
-  users: [User]!
+  users(
+    where: UserWhereInput,
+  )
+  : [User]!
 }
 

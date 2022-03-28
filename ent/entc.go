@@ -15,8 +15,8 @@ func main() {
 		entgql.WithConfigPath("../gqlgen.yml"),
 		// Generate the filters to a separate schema
 		// file and load it in the gqlgen.yml config.
-		//entgql.WithWhereFilters(true),
-		//entgql.WithSchemaPath("../ent.graphql"),
+		entgql.WithWhereFilters(true),
+		entgql.WithSchemaPath("../ent.graphql"),
 	)
 	if err != nil {
 		log.Fatalf("creating entgql extension: %v", err)

@@ -5,6 +5,7 @@ package user
 
 import (
 	"context"
+
 	"user/ent"
 )
 
@@ -21,8 +22,12 @@ func (r *mutationResolver) FollowUser(ctx context.Context, input FollowUserInput
 		Save(ctx)
 }
 
-func (r *queryResolver) Users(ctx context.Context) ([]*ent.User, error) {
-	return r.client.User.Query().All(ctx)
+func (r *queryResolver) Users(ctx context.Context, where *ent.UserWhereInput) ([]*ent.User, error) {
+	q, err := where.Filter(r.client.User.Query())
+	if err != nil {
+		return nil, err
+	}
+	return q.All(ctx)
 }
 
 // Mutation returns MutationResolver implementation.
